@@ -111,10 +111,10 @@
 
         Colemak {
             bindings = <
-&kp Q           &kp W       &kp F        &kp P             &kp G                                                         &kp J        &kp L  &kp U      &kp Y    &kp SEMICOLON
-&mt LEFT_WIN A  &mt LALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp D                              &kp F13                    &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z           &kp X       &kp C        &kp V             &kp B      &kp F14                 &kp F15                    &kp K        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp ESC         &mkp MB3    &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                             &lt 3 DEL
+&kp Q           &kp W       &kp F        &kp P             &kp G                                                         &kp J        &kp L              &kp U        &kp Y       &kp SEMICOLON
+&mt LEFT_WIN A  &mt LALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp D                              &kp F13                    &kp H        &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp Z           &kp X       &kp C        &kp V             &kp B      &kp F14                 &kp F15                    &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
+&kp ESC         &mkp MB3    &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
