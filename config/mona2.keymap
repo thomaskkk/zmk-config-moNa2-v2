@@ -15,34 +15,46 @@
     quick-tap-ms = <0>;
 };
 
-&lt {
-    quick-tap-ms = <300>;
-    flavor = "balanced";
-};
+&lt { flavor = "hold-preferred"; };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        layer4_ESC {
-            bindings = <&lt 0 ESC>;
-            key-positions = <39 38>;
+        game1_layer {
+            bindings = <&tog 4>;
+            key-positions = <0 33>;
+            layers = <0 1 2 3 5>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        default_layer {
+            bindings = <&to 0>;
+            key-positions = <0 33>;
+            layers = <4>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <38 39>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <4 3>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <14 13>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <25 24>;
         };
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         spacedqt: spacedqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -80,15 +92,6 @@
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -104,6 +107,28 @@
 
             tap-ms = <20>;
         };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <80>;
+            flavor = "tap-preferred";
+        };
+
+        tm: thumb_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -112,7 +137,7 @@
         Colemak {
             bindings = <
 &kp Q           &kp W       &kp F        &kp P             &kp G                                                         &kp J        &kp L              &kp U        &kp Y       &kp SEMICOLON
-&mt LEFT_WIN A  &mt LALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp D                              &kp F13                    &kp H        &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&hm LEFT_WIN A  &hm LALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp D                              &kp F13                    &kp H        &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
 &kp Z           &kp X       &kp C        &kp V             &kp B      &kp F14                 &kp F15                    &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
 &kp ESC         &mkp MB3    &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
@@ -151,6 +176,17 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        Game {
+            bindings = <
+&kp TAB         &kp Q   &kp W         &kp E   &kp R                        &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp A   &kp S         &kp S   &kp F                &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp Z   &kp X         &kp C   &kp V   &kp B        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &trans  &kp LEFT_ALT  &trans  &trans  &kp SPACE    &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         MOUSE {
