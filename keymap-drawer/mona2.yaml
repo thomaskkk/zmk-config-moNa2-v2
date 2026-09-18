@@ -27,8 +27,8 @@ layers:
   - C
   - V
   - B
-  - F14
-  - F15
+  - '['
+  - ']'
   - K
   - M
   - ','
@@ -44,11 +44,11 @@ layers:
   - {t: ENTER, h: Symbols}
   - {t: DEL, h: Function}
   Navigation:
-  - '1'
-  - '2'
+  - Ctl+Gui+LEFT
+  - Sft+Ctl+TAB
   - UP ARROW
-  - '4'
-  - '5'
+  - Ctl+TAB
+  - Ctl+Gui+RIGHT
   - +
   - '7'
   - '8'
@@ -101,7 +101,7 @@ layers:
   - '&spacecaret'
   - '&spacetilde'
   - '&spacesqt'
-  - {t: ▽, type: trans}
+  - '&spacedqt'
   - {t: ▽, type: trans}
   - '"'
   - ''''
@@ -178,22 +178,22 @@ layers:
   - W
   - E
   - R
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - KP PLUS
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP MULTIPLY
   - LEFT SHIFT
   - A
   - S
-  - S
+  - D
   - F
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - KP MINUS
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP SLASH
   - {t: ▽, type: trans}
   - Z
   - X
@@ -201,20 +201,20 @@ layers:
   - V
   - B
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - TAB
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP NUM
   - LCTRL
   - {t: ▽, type: trans}
   - LEFT ALT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SPACE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ENTER
+  - KP 0
+  - KP DOT
   '5':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
