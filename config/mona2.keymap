@@ -138,19 +138,19 @@
             bindings = <
 &kp Q           &kp W       &kp F        &kp P             &kp G                                                         &kp J        &kp L              &kp U        &kp Y       &kp SEMICOLON
 &hm LEFT_WIN A  &hm LALT R  &hm LCTRL S  &hm LEFT_SHIFT T  &kp D                              &kp F13                    &kp H        &hm RIGHT_SHIFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
-&kp Z           &kp X       &kp C        &kp V             &kp B      &kp F14                 &kp F15                    &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
+&kp Z           &kp X       &kp C        &kp V             &kp B      &kp LEFT_BRACKET        &kp RIGHT_BRACKET          &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
 &kp ESC         &mkp MB3    &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
         };
 
         Navigation {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp UP_ARROW  &kp NUMBER_4  &kp NUMBER_5                     &kp PLUS    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
-&kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PAGE_UP              &trans  &kp MINUS   &kp N4        &kp N5        &kp N6        &kp SLASH
-&kp END       &kp PSCRN     &kp C_AL_CAL  &kp INS       &kp PAGE_DOWN  &trans    &trans  &kp PERIOD  &kp N1        &kp N2        &kp N3        &kp ENTER
-&trans        &trans        &trans        &trans        &trans         &trans    &trans  &kp N0                                                &trans
+&kp LC(LG(LEFT))  &kp LS(LC(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LC(LG(RIGHT))                    &kp PLUS    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
+&kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_UP                  &trans  &kp MINUS   &kp N4        &kp N5        &kp N6        &kp SLASH
+&kp END           &kp PSCRN        &kp C_AL_CAL  &kp INS      &kp PAGE_DOWN      &trans    &trans  &kp PERIOD  &kp N1        &kp N2        &kp N3        &kp ENTER
+&trans            &trans           &trans        &trans       &trans             &trans    &trans  &kp N0                                                &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -159,7 +159,7 @@
         Symbols {
             bindings = <
 &kp EXCL     &kp AT       &kp HASH     &kp DOLLAR  &kp PERCENT                       &kp CARET          &kp AMPERSAND     &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&spacegrave  &spacecaret  &spacetilde  &spacesqt   &trans                    &trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp TILDE         &kp CARET             &kp GRAVE
+&spacegrave  &spacecaret  &spacetilde  &spacesqt   &spacedqt                 &trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp TILDE         &kp CARET             &kp GRAVE
 &kp PIPE     &kp EQUAL    &kp PLUS     &kp MINUS   &kp UNDER    &spacedqt    &trans  &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
 &trans       &trans       &trans       &trans      &trans       &kp SPACE    &trans  &trans                                                                       &trans
             >;
@@ -180,10 +180,10 @@
 
         Game {
             bindings = <
-&kp TAB         &kp Q   &kp W         &kp E   &kp R                        &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp A   &kp S         &kp S   &kp F                &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &kp Z   &kp X         &kp C   &kp V   &kp B        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &trans  &kp LEFT_ALT  &trans  &trans  &kp SPACE    &trans  &trans                          &trans
+&kp TAB         &kp Q   &kp W         &kp E   &kp R                           &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY
+&kp LEFT_SHIFT  &kp A   &kp S         &kp D   &kp F                &trans     &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_SLASH
+&trans          &kp Z   &kp X         &kp C   &kp V   &kp B        &trans     &kp TAB       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_NUM
+&kp LCTRL       &trans  &kp LEFT_ALT  &trans  &trans  &kp SPACE    &kp ENTER  &kp KP_N0                                      &kp KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
