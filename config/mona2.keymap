@@ -142,7 +142,7 @@
 &kp ESC         &mkp MB3    &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         Navigation {
@@ -153,7 +153,7 @@
 &trans            &trans           &trans        &trans       &trans             &trans    &trans  &kp N0                                                &trans
             >;
 
-            sensor-bindings = <&scroll_right_left>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP K_VOLUME_DOWN>;
         };
 
         Symbols {
@@ -164,7 +164,7 @@
 &trans       &trans       &trans       &trans      &trans       &kp SPACE    &trans  &trans                                                                       &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_right_left>;
         };
 
         Function {
@@ -178,23 +178,23 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        Game {
+        Game_1 {
             bindings = <
 &kp TAB         &kp Q   &kp W         &kp E   &kp R                           &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY
 &kp LEFT_SHIFT  &kp A   &kp S         &kp D   &kp F                &trans     &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_SLASH
 &trans          &kp Z   &kp X         &kp C   &kp V   &kp B        &trans     &kp TAB       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_NUM
-&kp LCTRL       &trans  &kp LEFT_ALT  &trans  &trans  &kp SPACE    &kp ENTER  &kp KP_N0                                      &kp KP_DOT
+&kp LCTRL       &trans  &kp LEFT_ALT  &trans  &tog 5  &kp SPACE    &kp ENTER  &kp KP_N0                                      &kp KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        MOUSE {
+        Game_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans    &mkp MB3  &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5                              &trans
+&trans        &trans        &trans        &trans        &trans                                &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans          &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
