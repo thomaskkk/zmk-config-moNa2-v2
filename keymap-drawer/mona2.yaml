@@ -172,7 +172,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  Game:
+  Game_1:
   - TAB
   - Q
   - W
@@ -210,31 +210,12 @@ layers:
   - {t: ▽, type: trans}
   - LEFT ALT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Game_2, h: toggle}
   - SPACE
   - ENTER
   - KP 0
   - KP DOT
-  '5':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp MB3'
-  - '&mkp MB1'
-  - '&mkp MB2'
+  Game_2:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -255,16 +236,35 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [0, 33]
-  k: {t: Game, h: toggle}
-  l: [Colemak, Navigation, Symbols, Function, '5']
+  k: {t: Game_1, h: toggle}
+  l: [Colemak, Navigation, Symbols, Function, Game_2]
 - p: [0, 33]
   k: {t: Colemak, h: toggle}
-  l: [Game]
+  l: [Game_1]
 - p: [38, 39]
   k: '&caps_word'
 - p: [4, 3]
