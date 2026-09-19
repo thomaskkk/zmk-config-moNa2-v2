@@ -188,19 +188,19 @@ layers:
   - S
   - D
   - F
-  - {t: ▽, type: trans}
+  - I
   - KP MINUS
   - KP 4
   - KP 5
   - KP 6
   - KP SLASH
-  - {t: ▽, type: trans}
   - Z
   - X
   - C
   - V
   - B
-  - {t: ▽, type: trans}
+  - G
+  - M
   - TAB
   - KP 1
   - KP 2
@@ -209,7 +209,7 @@ layers:
   - LCTRL
   - {t: ▽, type: trans}
   - LEFT ALT
-  - {t: ▽, type: trans}
+  - ESC
   - {t: Game_2, h: toggle}
   - SPACE
   - ENTER
