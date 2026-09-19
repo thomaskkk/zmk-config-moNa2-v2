@@ -180,10 +180,10 @@
 
         Game_1 {
             bindings = <
-&kp TAB         &kp Q   &kp W         &kp E    &kp R                           &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY
-&kp LEFT_SHIFT  &kp A   &kp S         &kp D    &kp F                &kp I      &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_SLASH
-&kp Z           &kp X   &kp C         &kp V    &kp B   &kp G        &kp M      &kp TAB       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_NUM
-&kp LCTRL       &trans  &kp LEFT_ALT  &kp ESC  &tog 5  &kp SPACE    &kp ENTER  &kp KP_N0                                      &kp KP_DOT
+&kp TAB         &kp Q   &kp W         &kp E    &kp R                          &kp KP_PLUS   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY
+&kp LEFT_SHIFT  &kp A   &kp S         &kp D    &kp F               &kp I      &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_SLASH
+&kp Z           &kp X   &kp C         &kp V    &kp B  &kp G        &kp M      &kp TAB       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_NUM
+&kp LCTRL       &trans  &kp LEFT_ALT  &kp ESC  &mo 5  &kp SPACE    &kp ENTER  &kp KP_N0                                      &kp KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
