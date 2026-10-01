@@ -1,0 +1,2 @@
+config SHIELD_MDK_DONGLE
+    def_bool $(shields_list_contains,mdk_dongle)

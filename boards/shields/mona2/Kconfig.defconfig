@@ -1,14 +1,43 @@
-if SHIELD_MONA2_R
+# ---------------------------------------------------------------------------
+# Dongle (nRF52840 MDK USB Dongle) = split CENTRAL, USB to the host
+# ---------------------------------------------------------------------------
+if SHIELD_MONA2_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "mona2"
 
-config ZMK_BLE
+config ZMK_SPLIT
     default y
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+# Left + right halves
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# 2 peripherals + 5 BT host profiles
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+# BLE is needed to talk to the halves (USB is enabled by the mdk_dongle shield)
+config ZMK_BLE
+    default y
+
+config ZMK_POINTING
+    default y
+
+endif
+
+# ---------------------------------------------------------------------------
+# Halves (Seeed XIAO nRF52840) = split PERIPHERALS
+# ---------------------------------------------------------------------------
+if SHIELD_MONA2_R
+
+# Trackball lives here; its motion is forwarded to the dongle.
 config INPUT
     default y
 
@@ -24,6 +53,9 @@ config PAW3222
 endif
 
 if SHIELD_MONA2_R || SHIELD_MONA2_L
+
+config ZMK_KEYBOARD_NAME
+    default "mona2"
 
 config NFCT_PINS_AS_GPIOS
     default y

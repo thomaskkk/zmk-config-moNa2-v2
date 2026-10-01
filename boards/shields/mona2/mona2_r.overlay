@@ -57,19 +57,11 @@
 };
 
 
-// Overrides for the input listener node
-&trackball_central_listener {
+// Dongle mode: the right half is now a split PERIPHERAL.
+// The trackball is proxied to the dongle through the input-split device;
+// the listener + scroll-layer processing runs on the dongle
+// (see trackball_listener in mona2-common.dtsi).
+&trackball_split {
     status = "okay";
     device = <&trackball_central>;
-
-    scroller {
-        layers = <1>;
-        input-processors = 
-            // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-            <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,   //スクロールのX軸・Y軸反転
-            <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
-    };
-
 };

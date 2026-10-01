@@ -1,0 +1,7 @@
+if SHIELD_MDK_DONGLE
+
+# Produce zmk.uf2 for drag-and-drop onto the UF2BOOT drive
+config BUILD_OUTPUT_UF2
+    default y
+
+endif

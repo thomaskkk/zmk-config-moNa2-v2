@@ -1,0 +1,53 @@
+/*
+ * moNa2 dongle: nRF52840 MDK USB Dongle acting as split CENTRAL.
+ * Both halves connect to it as peripherals; it talks to the host over USB.
+ */
+#include "mona2-common.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    /* The dongle has no keys of its own. */
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+
+    /*
+     * Placeholder sensor nodes so the keymap's sensor-bindings resolve on the
+     * central. The left half's EC11 events arrive over the split link with
+     * sensor index 0, so the order here must match mona2.dtsi.
+     * Pins are irrelevant (nodes are disabled on the dongle).
+     */
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <24>;
+        status = "disabled";
+    };
+
+    right_encoder: encoder_right {
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <10>;
+    };
+};
+
+/* Receive trackball motion from the right half and send it to the host. */
+&trackball_split {
+    status = "okay";
+};
+
+&trackball_listener {
+    status = "okay";
+};

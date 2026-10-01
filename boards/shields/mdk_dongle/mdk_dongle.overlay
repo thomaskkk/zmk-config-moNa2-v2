@@ -1,0 +1,38 @@
+/*
+ * Board-level fixes to use the Makerdiary nRF52840 MDK USB Dongle with ZMK.
+ * Keyboard-agnostic: combine with the keyboard's dongle shield, or with
+ * settings_reset, e.g.  shield: "mona2_dongle mdk_dongle"
+ */
+
+/*
+ * Flash layout for the Makerdiary UF2 bootloader (factory default):
+ *   0x00000 MBR (4 KB) | 0x01000 application | 0xF4000 UF2 bootloader
+ * Zephyr's stock board file carves flash for an MCUboot/nRF5-bootloader
+ * layout with a 16 KB settings area; replace it with one big app region
+ * and a 32 KB settings (NVS) region just below the bootloader.
+ */
+&flash0 {
+    /delete-node/ partitions;
+
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        code_partition: partition@1000 {
+            label = "code_partition";
+            reg = <0x00001000 0x000eb000>;
+        };
+
+        storage_partition: partition@ec000 {
+            label = "storage";
+            reg = <0x000ec000 0x00008000>;
+        };
+    };
+};
+
+/ {
+    chosen {
+        zephyr,code-partition = &code_partition;
+    };
+};
