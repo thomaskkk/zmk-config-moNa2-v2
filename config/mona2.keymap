@@ -36,26 +36,31 @@
         caps_word {
             bindings = <&caps_word>;
             key-positions = <38 39>;
+            layers = <0>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <4 3>;
+            layers = <0>;
         };
 
         delete {
             bindings = <&kp DEL>;
             key-positions = <14 13>;
+            layers = <0>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <25 24>;
+            layers = <0>;
         };
 
         esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
+            layers = <0>;
         };
     };
 
@@ -134,6 +139,19 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
+        };
+
+        hmn: homerow_mods_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_NAV";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <17>;
         };
     };
 
