@@ -68,21 +68,21 @@ layers:
   - END
   - PSCRN
   - AL CAL
-  - INS
+  - Alt+TAB
   - PAGE DOWN
-  - {t: ▽, type: trans}
+  - INS
   - {t: ▽, type: trans}
   - .
   - '1'
   - '2'
   - '3'
   - ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
   - '&mkp MB3'
   - '&mkp MB2'
-  - {t: '&mkp MB4', type: held}
-  - '&mkp MB5'
+  - {t: LCTRL, type: held}
+  - LSHFT
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
