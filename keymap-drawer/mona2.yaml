@@ -226,11 +226,16 @@ combos:
   l: [Game_1]
 - p: [38, 39]
   k: '&caps_word'
+  l: [Colemak]
 - p: [4, 3]
   k: BACKSPACE
+  l: [Colemak]
 - p: [14, 13]
   k: DEL
+  l: [Colemak]
 - p: [25, 24]
   k: ENTER
+  l: [Colemak]
 - p: [0, 1]
   k: ESC
+  l: [Colemak]
