@@ -113,7 +113,7 @@ layers:
   - +
   - '-'
   - _
-  - '&spacedqt'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '{'
   - '}'
@@ -232,3 +232,5 @@ combos:
   k: DEL
 - p: [25, 24]
   k: ENTER
+- p: [0, 1]
+  k: ESC
