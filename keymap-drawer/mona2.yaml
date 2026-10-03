@@ -16,7 +16,7 @@ layers:
   - {t: S, h: LCTRL}
   - {t: T, h: LEFT SHIFT}
   - D
-  - F13
+  - Alt+Ctl+DEL
   - H
   - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
@@ -34,9 +34,9 @@ layers:
   - ','
   - .
   - /
+  - DEL
+  - {t: ▽, type: trans}
   - ESC
-  - '&mkp MB3'
-  - '&mkp MB2'
   - '&mkp MB1'
   - {t: TAB, h: Navigation}
   - {t: SPACE, h: LEFT SHIFT}
@@ -79,10 +79,10 @@ layers:
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+  - '&mkp MB3'
+  - '&mkp MB2'
+  - {t: '&mkp MB4', type: held}
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
@@ -125,7 +125,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SPACE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -172,54 +172,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  Game_1:
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - KP PLUS
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MULTIPLY
-  - LEFT SHIFT
-  - A
-  - S
-  - D
-  - F
-  - I
-  - KP MINUS
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP SLASH
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - G
-  - M
-  - TAB
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP NUM
-  - LCTRL
-  - {t: ▽, type: trans}
-  - LEFT ALT
-  - ESC
-  - Game_2
-  - SPACE
-  - ENTER
-  - KP 0
-  - KP DOT
+  Game_1: [TAB, Q, W, E, R, KP PLUS, KP 7, KP 8, KP 9, KP MULTIPLY, LEFT SHIFT, A, S, D, F, I, KP MINUS, KP 4, KP 5, KP 6, KP SLASH, Z, X, C, V, B, G, M, TAB, KP
+      1, KP 2, KP 3, KP NUM, LCTRL, LEFT ALT, ESCAPE, LCTRL, Game_2, SPACE, ENTER, KP 0, KP DOT]
   Game_2:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - I
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -229,8 +189,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - M
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -249,9 +208,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
