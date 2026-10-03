@@ -52,6 +52,11 @@
             bindings = <&kp ENTER>;
             key-positions = <25 24>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -143,7 +148,7 @@
 &kp LS(LA(TAB))  &kp LA(TAB)  &kp ESC      &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         Navigation {
@@ -159,10 +164,10 @@
 
         Symbols {
             bindings = <
-&kp EXCL     &kp AT       &kp HASH     &kp DOLLAR  &kp PERCENT                       &kp CARET          &kp AMPERSAND     &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&spacegrave  &spacecaret  &spacetilde  &spacesqt   &spacedqt                 &trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp TILDE         &kp CARET             &kp GRAVE
-&kp PIPE     &kp EQUAL    &kp PLUS     &kp MINUS   &kp UNDER    &spacedqt    &trans  &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
-&trans       &trans       &mkp MB3     &mkp MB2    &mkp MB4     &mkp MB5     &trans  &trans                                                                       &trans
+&kp EXCL     &kp AT       &kp HASH     &kp DOLLAR  &kp PERCENT                      &kp CARET          &kp AMPERSAND     &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&spacegrave  &spacecaret  &spacetilde  &spacesqt   &spacedqt                &trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp TILDE         &kp CARET             &kp GRAVE
+&kp PIPE     &kp EQUAL    &kp PLUS     &kp MINUS   &kp UNDER    &trans      &trans  &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
+&trans       &trans       &mkp MB3     &mkp MB2    &mkp MB4     &mkp MB5    &trans  &trans                                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -176,7 +181,7 @@
 &trans   &trans          &trans    &trans   &trans   &trans    &trans        &trans                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Game_1 {
