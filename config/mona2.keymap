@@ -151,7 +151,7 @@
             quick-tap-ms = <150>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <17>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 12 11 14 13 21 22 24 23 25 26>;
         };
     };
 
@@ -171,10 +171,10 @@
 
         Navigation {
             bindings = <
-&kp LC(LG(LEFT))  &kp LS(LC(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LC(LG(RIGHT))                     &kp PLUS    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
-&kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_UP                   &trans  &kp MINUS   &kp N4        &kp N5        &kp N6        &kp SLASH
-&kp END           &kp PSCRN        &kp C_AL_CAL  &kp LA(TAB)  &kp PAGE_DOWN      &kp INS    &trans  &kp PERIOD  &kp N1        &kp N2        &kp N3        &kp ENTER
-&trans            &trans           &trans        &trans       &trans             &trans     &trans  &kp N0                                                &trans
+&kp LC(LG(LEFT))  &kp LS(LC(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LC(LG(RIGHT))                     &kp PLUS    &kp NUMBER_7         &kp NUMBER_8   &kp NUMBER_9       &kp ASTERISK
+&kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_UP                   &trans  &kp MINUS   &hmn RIGHT_SHIFT N4  &hmn RCTRL N5  &hmn RIGHT_ALT N6  &hmn RIGHT_META SLASH
+&kp END           &kp PSCRN        &kp C_AL_CAL  &kp LA(TAB)  &kp PAGE_DOWN      &kp INS    &trans  &kp PERIOD  &kp N1               &kp N2         &kp N3             &kp ENTER
+&trans            &trans           &trans        &trans       &trans             &trans     &trans  &kp N0                                                             &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
