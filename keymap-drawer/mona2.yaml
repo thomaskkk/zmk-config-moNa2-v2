@@ -61,10 +61,10 @@ layers:
   - PAGE UP
   - {t: ▽, type: trans}
   - '-'
-  - '4'
-  - '5'
-  - '6'
-  - /
+  - {t: '4', h: RIGHT SHIFT}
+  - {t: '5', h: RCTRL}
+  - {t: '6', h: RIGHT ALT}
+  - {t: /, h: RIGHT META}
   - END
   - PSCRN
   - AL CAL
