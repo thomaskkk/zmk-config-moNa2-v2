@@ -20,7 +20,7 @@ layers:
   - H
   - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
-  - {t: I, h: RALT}
+  - {t: I, h: LALT}
   - {t: O, h: RGUI}
   - Z
   - X
@@ -59,11 +59,11 @@ layers:
   - DOWN
   - RIGHT
   - PAGE UP
-  - {t: ▽, type: trans}
+  - ''
   - '-'
   - {t: '4', h: RIGHT SHIFT}
   - {t: '5', h: RCTRL}
-  - {t: '6', h: RIGHT ALT}
+  - {t: '6', h: LALT}
   - {t: /, h: RIGHT META}
   - END
   - PSCRN
@@ -102,7 +102,7 @@ layers:
   - '&spacetilde'
   - '&spacesqt'
   - '&spacedqt'
-  - {t: ▽, type: trans}
+  - ''
   - '"'
   - ''''
   - '~'
