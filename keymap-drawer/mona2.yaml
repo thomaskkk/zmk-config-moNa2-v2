@@ -16,11 +16,11 @@ layers:
   - {t: S, h: LCTRL}
   - {t: T, h: LEFT SHIFT}
   - D
-  - F13
+  - ESC
   - H
   - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
-  - {t: I, h: RALT}
+  - {t: I, h: LALT}
   - {t: O, h: RGUI}
   - Z
   - X
@@ -34,8 +34,8 @@ layers:
   - ','
   - .
   - /
-  - ESC
-  - '&mkp MB3'
+  - Sft+Alt+TAB
+  - Alt+TAB
   - '&mkp MB2'
   - '&mkp MB1'
   - {t: TAB, h: Navigation}
@@ -59,18 +59,18 @@ layers:
   - DOWN
   - RIGHT
   - PAGE UP
-  - {t: ▽, type: trans}
+  - ''
   - '-'
-  - '4'
-  - '5'
-  - '6'
-  - /
+  - {t: '4', h: RIGHT SHIFT}
+  - {t: '5', h: RCTRL}
+  - {t: '6', h: LALT}
+  - {t: /, h: RIGHT META}
   - END
   - PSCRN
   - AL CAL
-  - INS
+  - Alt+TAB
   - PAGE DOWN
-  - {t: ▽, type: trans}
+  - INS
   - {t: ▽, type: trans}
   - .
   - '1'
@@ -102,7 +102,7 @@ layers:
   - '&spacetilde'
   - '&spacesqt'
   - '&spacedqt'
-  - {t: ▽, type: trans}
+  - ''
   - '"'
   - ''''
   - '~'
@@ -113,7 +113,7 @@ layers:
   - +
   - '-'
   - _
-  - '&spacedqt'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '{'
   - '}'
@@ -122,10 +122,10 @@ layers:
   - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - SPACE
+  - '&mkp MB3'
+  - '&mkp MB2'
+  - '&mkp MB4'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -172,54 +172,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  Game_1:
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - KP PLUS
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MULTIPLY
-  - LEFT SHIFT
-  - A
-  - S
-  - D
-  - F
-  - I
-  - KP MINUS
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP SLASH
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - G
-  - M
-  - TAB
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP NUM
-  - LCTRL
-  - {t: ▽, type: trans}
-  - LEFT ALT
-  - ESC
-  - Game_2
-  - SPACE
-  - ENTER
-  - KP 0
-  - KP DOT
+  Game_1: [TAB, Q, W, E, R, KP PLUS, KP 7, KP 8, KP 9, KP MULTIPLY, LEFT SHIFT, A, S, D, F, I, KP MINUS, KP 4, KP 5, KP 6, KP SLASH, Z, X, C, V, B, G, M, TAB, KP
+      1, KP 2, KP 3, KP NUM, LCTRL, LEFT ALT, ESCAPE, LCTRL, Game_2, SPACE, ENTER, KP 0, KP DOT]
   Game_2:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - I
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -229,8 +189,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - M
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -249,9 +208,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -267,9 +226,16 @@ combos:
   l: [Game_1]
 - p: [38, 39]
   k: '&caps_word'
+  l: [Colemak]
 - p: [4, 3]
   k: BACKSPACE
+  l: [Colemak]
 - p: [14, 13]
   k: DEL
+  l: [Colemak]
 - p: [25, 24]
   k: ENTER
+  l: [Colemak]
+- p: [0, 1]
+  k: ESC
+  l: [Colemak]
