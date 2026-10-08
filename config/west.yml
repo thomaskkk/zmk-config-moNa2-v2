@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: thomaskkk  # <-- ZMK fork: v0.3 + backported fixes (see DONGLE.md)
+      url-base: https://github.com/thomaskkk
     - name: sekigon-gonnoc  # <-- PAW3222
       url-base: https://github.com/sekigon-gonnoc
     - name: caksoylar  # <-- RGB LED
@@ -10,8 +12,8 @@ manifest:
       url-base: https://github.com/zettaface
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3-branch
+      remote: thomaskkk
+      revision: v0.3-mona2
       import: app/west.yml
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc

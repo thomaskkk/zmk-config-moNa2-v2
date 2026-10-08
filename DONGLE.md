@@ -60,6 +60,24 @@ The LEDs on the halves now only show their own battery level and whether they're
 
 Plug in the dongle and open ZMK Studio, then connect over USB serial.
 
+## ZMK version: v0.3 + backported fixes
+
+`config/west.yml` pulls ZMK from the fork
+[`thomaskkk/zmk`](https://github.com/thomaskkk/zmk), branch **`v0.3-mona2`**.
+That branch is `zmkfirmware/zmk` `v0.3-branch` with five fixes taken from `main`.
+They are cherry-picked unchanged, and each commit message notes where it came from:
+
+| Upstream PR | Fix |
+|---|---|
+| [#3110](https://github.com/zmkfirmware/zmk/pull/3110) | The right half froze when you held a key and moved the trackball at the same time, e.g. scrolling on layer 1 |
+| [#3204](https://github.com/zmkfirmware/zmk/pull/3204) | Mouse buttons are released if the right half disconnects |
+| [#3070](https://github.com/zmkfirmware/zmk/pull/3070) | Fixes the dongle dropping off USB after flashing, waking or booting |
+| [#3196](https://github.com/zmkfirmware/zmk/pull/3196) | Sets the horizontal-scroll field in mouse reports, which was left uninitialized |
+| [#3084](https://github.com/zmkfirmware/zmk/pull/3084) | Encoder rotation remainder was handled wrong |
+
+When ZMK v0.4 comes out, point `zmk` back at `zmkfirmware`. It will
+already include all five fixes.
+
 ## Notes and caveats
 
 - **You need the dongle to use the keyboard.** The halves only talk to the dongle.
