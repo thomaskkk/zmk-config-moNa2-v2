@@ -16,7 +16,7 @@ layers:
   - {t: S, h: LCTRL}
   - {t: T, h: LEFT SHIFT}
   - D
-  - Alt+Ctl+DEL
+  - ESC
   - H
   - {t: N, h: RIGHT SHIFT}
   - {t: E, h: RCTRL}
@@ -36,7 +36,7 @@ layers:
   - /
   - Sft+Alt+TAB
   - Alt+TAB
-  - ESC
+  - '&mkp MB2'
   - '&mkp MB1'
   - {t: TAB, h: Navigation}
   - {t: SPACE, h: LEFT SHIFT}
