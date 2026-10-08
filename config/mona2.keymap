@@ -168,9 +168,9 @@
         Colemak {
             bindings = <
 &kp Q            &kp W        &kp F        &kp P             &kp G                                                         &kp J        &kp L              &kp U        &kp Y       &kp SEMICOLON
-&hm LEFT_WIN A   &hm LALT R   &hm LCTRL S  &hm LEFT_SHIFT T  &kp D                              &kp LA(LC(DEL))            &kp H        &hm RIGHT_SHIFT N  &hm RCTRL E  &hm LALT I  &hm RGUI O
+&hm LEFT_WIN A   &hm LALT R   &hm LCTRL S  &hm LEFT_SHIFT T  &kp D                              &kp ESC                    &kp H        &hm RIGHT_SHIFT N  &hm RCTRL E  &hm LALT I  &hm RGUI O
 &kp Z            &kp X        &kp C        &kp V             &kp B      &kp LEFT_BRACKET        &kp RIGHT_BRACKET          &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
-&kp LS(LA(TAB))  &kp LA(TAB)  &kp ESC      &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
+&kp LS(LA(TAB))  &kp LA(TAB)  &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
