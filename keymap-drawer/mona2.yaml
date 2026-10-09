@@ -149,7 +149,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - OUT TOG
   - BT CLR
   - INS
   - SCROLLLOCK
