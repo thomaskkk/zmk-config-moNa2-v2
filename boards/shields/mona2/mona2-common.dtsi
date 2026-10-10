@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <physical_layouts.dtsi>
 
 / {
@@ -100,14 +101,37 @@
         status = "disabled";
         device = <&trackball_split>;
 
-        /* Layer 1 (Navigation): trackball becomes a scroll wheel. */
+        /*
+         * Layer 1 (Navigation): trackball becomes a scroll wheel.
+         * Vertical scroll (up/down) is kept; horizontal scroll (left/right)
+         * is zeroed out via zip_scroll_h_disable's 0 multiplier.
+         */
         scroller {
             layers = <1>;
             input-processors =
                 <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-                <&zip_scroll_scaler 1 5>;
+                <&zip_scroll_v_scaler 1 5>,
+                <&zip_scroll_h_disable 0 1>;
         };
+    };
+
+    /* Vertical scroll: same scale as the previous combined scroll scaler. */
+    zip_scroll_v_scaler: zip_scroll_v_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL>;
+        track-remainders;
+    };
+
+    /* Horizontal scroll: multiplier is set to 0 at the call site to disable it. */
+    zip_scroll_h_disable: zip_scroll_h_disable {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_HWHEEL>;
+        track-remainders;
     };
 };
