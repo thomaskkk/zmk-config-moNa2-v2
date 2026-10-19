@@ -68,17 +68,17 @@ layers:
   - END
   - PSCRN
   - AL CAL
-  - Alt+TAB
-  - PAGE DOWN
   - INS
+  - PAGE DOWN
+  - SCROLLLOCK
   - {t: ▽, type: trans}
   - .
   - '1'
   - '2'
   - '3'
   - ENTER
-  - CAPS
-  - SCROLLLOCK
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
