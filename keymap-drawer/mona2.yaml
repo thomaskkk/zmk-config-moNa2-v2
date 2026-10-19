@@ -59,7 +59,7 @@ layers:
   - DOWN
   - RIGHT
   - PAGE UP
-  - ''
+  - {t: ▽, type: trans}
   - '-'
   - {t: '4', h: RIGHT SHIFT}
   - {t: '5', h: RCTRL}
@@ -77,8 +77,8 @@ layers:
   - '2'
   - '3'
   - ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - CAPS
+  - SCROLLLOCK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -102,7 +102,7 @@ layers:
   - '&spacetilde'
   - '&spacesqt'
   - '&spacedqt'
-  - ''
+  - {t: ▽, type: trans}
   - '"'
   - ''''
   - '~'
@@ -151,12 +151,12 @@ layers:
   - {t: ▽, type: trans}
   - OUT TOG
   - BT CLR
-  - INS
-  - SCROLLLOCK
-  - CAPS
   - F11
   - F12
-  - {t: ▽, type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
   - VOL DN
   - MUTE
   - PREV
