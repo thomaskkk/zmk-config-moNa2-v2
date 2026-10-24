@@ -238,4 +238,4 @@ combos:
   l: [Colemak]
 - p: [0, 1]
   k: ESC
-  l: [Colemak]
+  l: [Colemak, Game_1]

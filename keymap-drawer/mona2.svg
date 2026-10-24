@@ -1144,6 +1144,10 @@ path.combo {
 <text x="28" y="112" class="combo tap layer-activator">Colemak</text>
 </a><text x="28" y="123" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="42" y="15" width="28" height="26" class="combo"/>
+<text x="56" y="28" class="combo tap">ESC</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 1400)" class="layer-Game_2">
