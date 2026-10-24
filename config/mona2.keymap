@@ -223,8 +223,8 @@
 
         Game_2 {
             bindings = <
-&trans        &trans        &trans        &trans        &kp I                                 &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &kp M                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &kp T         &kp Y         &kp I                                 &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &kp H         &kp M                         &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &trans  &trans  &trans  &trans  &trans  &trans
 &kp N7        &kp N8        &kp N9        &trans        &trans        &trans          &trans  &trans                          &trans
             >;
