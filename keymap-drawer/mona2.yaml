@@ -67,7 +67,7 @@ layers:
   - {t: /, h: RIGHT META}
   - END
   - PSCRN
-  - AL CAL
+  - CALC
   - INS
   - PAGE DOWN
   - SCROLLLOCK
