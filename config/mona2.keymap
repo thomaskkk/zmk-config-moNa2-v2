@@ -12,12 +12,14 @@
 #define SCROLL 6
 
 /* Key positions (see keymap-drawer/mona2.svg) — used by positional hold-taps */
+
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 26
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 20 27 28 29 30 31 32
 #define THUMBS 33 34 35 36 37 38 39 40 41
 
 /* Thumb mod-taps (Space/Shift, Backspace/Shift):
  * quick-tap lets a tap-then-hold auto-repeat Space/Backspace. */
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <175>;
@@ -26,9 +28,8 @@
 /* Layer-taps (Tab/Enter/Del): "balanced" needs another key pressed AND
  * released before switching layer, so a fast roll out of Enter/Del
  * (whose release can arrive late over the split link) stays a tap. */
-&lt {
-    flavor = "balanced";
-};
+
+&lt { flavor = "balanced"; };
 
 / {
     combos {
@@ -143,6 +144,7 @@
          *   so same-hand rolls like "st" / "es" always type letters;
          * - hold-trigger-on-release lets you stack mods on one hand;
          * - require-prior-idle-ms keeps them as letters while typing fast. */
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LEFT";
@@ -201,10 +203,10 @@
 
         Colemak {
             bindings = <
-&kp Q            &kp W        &kp F        &kp P             &kp G                                                         &kp J        &kp L              &kp U        &kp Y       &kp SEMICOLON
-&hml LEFT_WIN A  &hml LALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp D                            &kp ESC                    &kp H        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-&kp Z            &kp X        &kp C        &kp V             &kp B      &kp LEFT_BRACKET        &kp RIGHT_BRACKET          &kp K        &kp M              &kp COMMA    &kp DOT     &kp SLASH
-&kp LS(LA(TAB))  &kp LA(TAB)  &mkp MB2     &mkp MB1          &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                              &lt 3 DEL
+&kp Q            &kp W        &kp F         &kp P              &kp G                                                         &kp J        &kp L               &kp U         &kp Y        &kp SEMICOLON
+&hml LEFT_WIN A  &hml LALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp D                              &kp ESC                    &kp H        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
+&kp Z            &kp X        &kp C         &kp V              &kp B      &kp LEFT_BRACKET        &kp RIGHT_BRACKET          &kp K        &kp M               &kp COMMA     &kp DOT      &kp SLASH
+&kp LS(LA(TAB))  &kp LA(TAB)  &mkp MB2      &mkp MB1           &lt 1 TAB  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                                 &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -214,7 +216,7 @@
             bindings = <
 &kp LC(LG(LEFT))  &kp LS(LC(TAB))  &kp UP_ARROW  &kp LC(TAB)  &kp LC(LG(RIGHT))                            &kp PLUS    &kp NUMBER_7         &kp NUMBER_8   &kp NUMBER_9  &kp ASTERISK
 &kp HOME          &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_UP                          &trans  &kp MINUS   &hmn RIGHT_SHIFT N4  &hmn RCTRL N5  &hmn LALT N6  &hmn RIGHT_META SLASH
-&kp END           &kp PSCRN        &kp C_AL_CAL  &kp INS      &kp PAGE_DOWN      &kp SCROLLLOCK    &trans  &kp PERIOD  &kp N1               &kp N2         &kp N3        &kp ENTER
+&kp END           &kp PSCRN        &kp K_CALC    &kp INS      &kp PAGE_DOWN      &kp SCROLLLOCK    &trans  &kp PERIOD  &kp N1               &kp N2         &kp N3        &kp ENTER
 &trans            &trans           &trans        &trans       &trans             &trans            &trans  &kp N0                                                        &trans
             >;
 
