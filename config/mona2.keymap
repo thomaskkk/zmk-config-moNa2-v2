@@ -25,11 +25,14 @@
     quick-tap-ms = <175>;
 };
 
-/* Layer-taps (Tab/Enter/Del): "balanced" needs another key pressed AND
- * released before switching layer, so a fast roll out of Enter/Del
- * (whose release can arrive late over the split link) stays a tap. */
+/* Layer-taps (Tab/Enter/Del): "hold-preferred" switches layer as soon as
+ * another key is pressed while the thumb is down. Do NOT use "balanced"
+ * here: it only switches layer if the other key is also released before
+ * the thumb. When typing accents (Enter-thumb + ' / ~ / ^ on the Symbols
+ * layer) the thumb is usually let go first, so "balanced" turned it into
+ * Enter + a base-layer letter (n / e / i) instead of the accent. */
 
-&lt { flavor = "balanced"; };
+&lt { flavor = "hold-preferred"; };
 
 / {
     combos {
